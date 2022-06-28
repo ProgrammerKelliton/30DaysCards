@@ -10,3 +10,9 @@
     width: 30vw;
     padding: 15px;
 }
+
+.card__title,
+.card__message {
+    margin: 5px;
+    text-align: center;
+}
