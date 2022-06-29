@@ -1,0 +1,83 @@
+.card {
+    border-radius: 10px;
+    box-shadow: rgba(0, 157, 255, 0.4) -5px 5px,
+        rgba(0, 157, 255, 0.3) -10px 10px, rgba(0, 157, 255, 0.2) -15px 15px,
+        rgba(0, 157, 255, 0.1) -20px 20px, rgba(0, 157, 255, 0.05) -25px 25px;
+    background-image: linear-gradient(-40deg, #009fff, #d9e9f7);
+}
+
+.card {
+    width: 250px;
+    padding: 10px;
+    transition: transform 0.15s linear;
+    perspective: 800px;
+    transform: rotateY(25deg) rotateX(10deg) scale(0.9);
+}
+
+.card__title,
+.card__message,
+.card__date {
+    margin: 5px;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.card__message {
+    height: 35vh;
+    overflow-x: hidden;
+}
+
+.card__message::-webkit-scrollbar {
+    background-color: transparent;
+    width: 0px;
+}
+
+.card {
+    overflow: hidden;
+    opacity: 0.8;
+    filter: blur(0.5px);
+}
+
+.card:hover {
+    transform: rotateY(0deg) rotateX(0deg) scale(1);
+}
+
+.card:hover {
+    opacity: 1;
+    filter: blur(0px);
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+}
+
+.card:hover::before {
+    content: "";
+    background-image: linear-gradient(-40deg, #009fff, #ec2f4b);
+    animation: light 2s infinite linear;
+    border-radius: 10px;
+}
+.card:hover::before {
+    width: 100px;
+    height: 600px;
+    position: absolute;
+    z-index: -1;
+    bottom: -15%;
+    left: 30%;
+}
+.card:hover::after {
+    content: "";
+    position: absolute;
+    inset: 5px;
+    background-image: linear-gradient(-40deg, #009fff, #d9e9f7);
+    border-radius: 10px;
+}
+
+@keyframes light {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
