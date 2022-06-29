@@ -1,8 +1,6 @@
 import { Card } from "./components/card";
 import "./App.css";
-
 import { gql, useQuery } from "@apollo/client";
-import { useEffect } from "react";
 
 const card = gql`
     query MyQuery {
@@ -13,24 +11,22 @@ const card = gql`
     }
 `;
 
-const Cards = ({ children }: any) => <div>{children}</div>;
+function CreateElement(data: any): any {
+    return data.cards.map((item: any, key: number) => (
+        <Card name={item.dia} key={key} message={item.descricao}></Card>
+    ));
+}
 
 function App() {
     const { loading, data } = useQuery(card);
 
     if (loading) {
-        return <Cards>Carregando</Cards>;
+        return <Card name="Carregando"></Card>;
     } else {
         return (
-            <Cards>
-                {data.cards.map((item: any, key: number) => (
-                    <Card
-                        name={item.dia}
-                        key={key}
-                        message={item.descricao}
-                    ></Card>
-                ))}
-            </Cards>
+            <div>
+                <div className="list">{CreateElement(data)}</div>
+            </div>
         );
     }
 }
