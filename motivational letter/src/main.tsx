@@ -1,7 +1,7 @@
 import { ApolloProvider } from "@apollo/client";
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App";
+import App from "./App/App";
 import { client } from "./services/client";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(

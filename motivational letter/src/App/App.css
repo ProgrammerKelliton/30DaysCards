@@ -3,9 +3,13 @@
     margin: 0;
 }
 
-body {
+body,
+.list {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+body {
     height: 100vh;
 }

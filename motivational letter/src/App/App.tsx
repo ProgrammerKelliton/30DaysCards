@@ -1,4 +1,4 @@
-import { Card } from "./components/card";
+import { Card } from "../components/card/index";
 import "./App.css";
 import { gql, useQuery } from "@apollo/client";
 
@@ -13,7 +13,12 @@ const card = gql`
 
 function CreateElement(data: any): any {
     return data.cards.map((item: any, key: number) => (
-        <Card name={item.dia} key={key} message={item.descricao}></Card>
+        <Card
+            name="Card"
+            date={item.dia}
+            key={key}
+            message={item.descricao}
+        ></Card>
     ));
 }
 
@@ -24,7 +29,7 @@ function App() {
         return <Card name="Carregando"></Card>;
     } else {
         return (
-            <div>
+            <div className="App">
                 <div className="list">{CreateElement(data)}</div>
             </div>
         );
