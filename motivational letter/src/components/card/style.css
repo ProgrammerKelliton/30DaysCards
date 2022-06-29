@@ -37,7 +37,6 @@
 .card {
     overflow: hidden;
     opacity: 0.8;
-    filter: blur(0.5px);
 }
 
 .card:hover {
@@ -46,7 +45,6 @@
 
 .card:hover {
     opacity: 1;
-    filter: blur(0px);
     cursor: pointer;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
 }
