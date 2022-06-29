@@ -1,5 +1,4 @@
 .card {
-    color: white;
     border-radius: 10px;
     box-shadow: rgba(0, 157, 255, 0.4) -5px 5px,
         rgba(0, 157, 255, 0.3) -10px 10px, rgba(0, 157, 255, 0.2) -15px 15px,
@@ -10,7 +9,7 @@
 .card {
     width: 250px;
     padding: 10px;
-    transition: all 0.2s linear;
+    transition: transform 0.15s linear;
     perspective: 800px;
     transform: rotateY(25deg) rotateX(10deg) scale(0.9);
 }
@@ -22,7 +21,7 @@
     text-align: center;
     padding: 10px;
     position: relative;
-    z-index: 10;
+    z-index: 1;
 }
 
 .card__message {
@@ -42,7 +41,6 @@
 }
 
 .card:hover {
-    perspective: 800px;
     transform: rotateY(0deg) rotateX(0deg) scale(1);
 }
 
@@ -56,14 +54,14 @@
 .card:hover::before {
     content: "";
     background-image: linear-gradient(-40deg, #009fff, #ec2f4b);
-    animation: Rotate 2s infinite linear;
+    animation: light 2s infinite linear;
     border-radius: 10px;
 }
 .card:hover::before {
     width: 100px;
     height: 600px;
     position: absolute;
-    z-index: -10;
+    z-index: -1;
     bottom: -15%;
     left: 30%;
 }
@@ -75,7 +73,7 @@
     border-radius: 10px;
 }
 
-@keyframes Rotate {
+@keyframes light {
     0% {
         transform: rotate(0deg);
     }
