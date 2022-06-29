@@ -3,13 +3,21 @@
     margin: 0;
 }
 
-body,
-.list {
+body {
+    overflow: hidden;
+    background-color: aliceblue;
+}
+
+.App {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: max-content;
+    height: 100vh;
+    margin: auto 10vw;
 }
 
-body {
-    height: 100vh;
+.list {
+    display: flex;
+    gap: 15px;
 }
