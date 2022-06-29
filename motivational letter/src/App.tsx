@@ -18,7 +18,7 @@ function CreateElement(data: any): any {
 }
 
 function App() {
-    const { loading, data } = useQuery(card);
+    let { loading, data } = useQuery(card);
 
     if (loading) {
         return <Card name="Carregando"></Card>;
