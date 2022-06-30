@@ -1,9 +1,9 @@
 .card {
     border-radius: 10px;
-    box-shadow: rgba(0, 157, 255, 0.4) -5px 5px,
-        rgba(0, 157, 255, 0.3) -10px 10px, rgba(0, 157, 255, 0.2) -15px 15px,
-        rgba(0, 157, 255, 0.1) -20px 20px, rgba(0, 157, 255, 0.05) -25px 25px;
-    background-image: linear-gradient(-40deg, #009fff, #d9e9f7);
+    box-shadow: rgba(30, 111, 217, 0.4) -5px 5px,
+        rgba(30, 111, 217, 0.3) -10px 10px, rgba(30, 111, 217, 0.2) -15px 15px,
+        rgba(30, 111, 217, 0.1) -20px 20px, rgba(30, 111, 217, 0.05) -25px 25px;
+    background-image: linear-gradient(-40deg, #1e6fd9, #5c9df2);
 }
 
 .card {
@@ -51,7 +51,7 @@
 
 .card:hover::before {
     content: "";
-    background-image: linear-gradient(-40deg, #009fff, #ec2f4b);
+    background-image: linear-gradient(-40deg, #8ce4ff, #59b1f0);
     animation: light 2s infinite linear;
     border-radius: 10px;
 }
@@ -67,7 +67,7 @@
     content: "";
     position: absolute;
     inset: 5px;
-    background-image: linear-gradient(-40deg, #009fff, #d9e9f7);
+    background-image: linear-gradient(-40deg, #1e6fd9, #5c9df2);
     border-radius: 10px;
 }
 
@@ -76,6 +76,7 @@
         transform: rotate(0deg);
     }
     100% {
+        background-image: linear-gradient(90deg, #00dbde 0%, #fc00ff 100%);
         transform: rotate(360deg);
     }
 }
