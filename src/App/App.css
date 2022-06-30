@@ -9,19 +9,18 @@ body {
 }
 
 body {
-    overflow-y: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: max-content;
-    height: 100vh;
     margin: auto 10vw;
-    flex-direction: column;
 }
 
 .list {
     display: flex;
-    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 30px 0px;
 }
 
 body::-webkit-scrollbar {
@@ -31,7 +30,7 @@ body::-webkit-scrollbar {
 }
 body::-webkit-scrollbar-thumb {
     background-color: #d9e9f7;
-    border-radius: 100% 100% 0% 0%;
+    border-radius: 100% 0% 0% 100%;
 }
 
 body::-webkit-scrollbar-thumb:hover {

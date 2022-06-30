@@ -1,7 +1,7 @@
-import { Card } from "../card/index";
+import { Card } from "../../components/card/index";
 
 function CreateElement(data: any): any {
-    return data.cards.map((item: any, key: number) => (
+    let obj: any = data.cards.map((item: any, key: number) => (
         <Card
             name="Card"
             date={item.dia}
@@ -9,6 +9,7 @@ function CreateElement(data: any): any {
             message={item.descricao}
         ></Card>
     ));
+    return obj;
 }
 
 export default CreateElement;

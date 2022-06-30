@@ -1,6 +1,7 @@
 import "./App.css";
 import { gql, useQuery } from "@apollo/client";
-import CreateElement from "../components/ElementCreate";
+import CreateElement from "../tsx/ElementCreate";
+import { Card } from "../components/card";
 
 const card = gql`
     query MyQuery {
@@ -13,7 +14,6 @@ const card = gql`
 
 function App() {
     let { loading, data } = useQuery(card);
-
     if (loading) {
         return <h1>Carregando</h1>;
     } else {
