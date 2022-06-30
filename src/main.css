@@ -3,5 +3,5 @@
     margin: 0;
 }
 body {
-    height: 100vw;
+    overflow-y: hidden;
 }
