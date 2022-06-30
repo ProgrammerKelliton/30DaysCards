@@ -5,6 +5,7 @@ import CreateElement from "../tsx/ElementCreate";
 const card = gql`
     query MyQuery {
         cards {
+            nome
             dia
             descricao
         }
